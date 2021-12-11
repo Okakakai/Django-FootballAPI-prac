@@ -2,7 +2,7 @@ from django.db import models
 
 import uuid
 
-class player(models.Model):
+class Player(models.Model):
     # player Model
 
     id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable=False)
@@ -12,3 +12,7 @@ class player(models.Model):
     team = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    # To discrimination on admin page
+    def __str__(self):
+        return f"{self.playername} {self.nationality}"

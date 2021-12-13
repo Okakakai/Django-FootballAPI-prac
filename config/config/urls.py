@@ -19,5 +19,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1', include('apiv1.urls')),
+    path('api/', include('players.api.urls')),
 ]

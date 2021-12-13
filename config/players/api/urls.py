@@ -4,9 +4,9 @@ from . import views
 
 router = routers.DefaultRouter()
 # /player/でviewにアクセスできるようにする
-router.register('players',views.PlayerViewSet)
+router.register(r'players',views.PlayerViewSet)
 
-app_name = 'apiv1'
+
 urlpatterns = [
-    path('/', include(router.urls))
+    path('', include(router.urls))
 ]

@@ -3,9 +3,9 @@ from rest_framework import viewsets
 
 from players.models import Player
 from .serializers  import PlayerSerializer
-from apiv1 import serializers
 
 class PlayerViewSet(viewsets.ModelViewSet):
 
-    queryset = Player.objects.all()
+    queryset = Player.objects.all().order_by('playername')
     serializer_class = PlayerSerializer
+

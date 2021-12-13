@@ -8,4 +8,4 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
     queryset = Player.objects.all().order_by('playername')
     serializer_class = PlayerSerializer
-
+    filter_fields = ('playername','nationality')

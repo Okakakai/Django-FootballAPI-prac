@@ -11,19 +11,21 @@ from config import settings
 class Player(models.Model):
     # player Model
 
-    id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    date = models.DateField(blank=False)
     playername = models.CharField(max_length=200)
-    age = models.PositiveIntegerField(null = False)
+    age = models.PositiveIntegerField(null=False)
     nationality = models.CharField(max_length=200)
     team = models.CharField(max_length=200)
-    created_at = models.DateTimeField(auto_now_add = True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    playerimage = models.ImageField(upload_to = 'images/', blank = True)
+    playerimage = models.ImageField(upload_to='images/', blank=True)
 
     # To discrimination on admin page
+
     def __str__(self):
         return f"{self.playername} {self.nationality}"
-    
+
     def get_image_path(self, filename):
         prefix = 'images/'
         name = str(uuid.uuid4()).replace('-', '')

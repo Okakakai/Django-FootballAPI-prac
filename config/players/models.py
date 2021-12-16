@@ -16,17 +16,15 @@ class Player(models.Model):
     date = models.DateField(blank=False)
     playername = models.CharField(max_length=200)
     age = models.PositiveIntegerField(null=False)
+    height = models.PositiveIntegerField
     nationality = models.CharField(max_length=200)
     team = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     playerimage = models.ImageField(upload_to='images/', blank=True)
 
-    # 
-    height = models.PositiveIntegerField
+    #
     totalvalue = models.PositiveIntegerField
-    offensiveawareness = models.PositiveIntegerField
-    tightpossession = models.PositiveIntegerField
 
     # scoring
     finishing = models.PositiveIntegerField
@@ -37,6 +35,8 @@ class Player(models.Model):
     kickingpower = models.PositiveIntegerField
 
     # dribbling
+    offensiveawareness = models.PositiveIntegerField
+    tightpossession = models.PositiveIntegerField
     physicalcontact = models.PositiveIntegerField
     ballcontrol = models.PositiveIntegerField
     dribbling = models.PositiveIntegerField

@@ -4,6 +4,7 @@ import uuid
 from django.db import models
 
 from django.conf import settings
+from django.db.models.fields import models.PositiveIntegerField
 
 from config import settings
 
@@ -11,6 +12,7 @@ from config import settings
 class Player(models.Model):
     # player Model
 
+    # player : basic parameters
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     date = models.DateField(blank=False)
     playername = models.CharField(max_length=200)
@@ -20,6 +22,50 @@ class Player(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     playerimage = models.ImageField(upload_to='images/', blank=True)
+
+    # ability numerical parameters
+    height = models.PositiveIntegerField
+    totalvalue = models.PositiveIntegerField
+    offensiveawareness = models.PositiveIntegerField
+    tightpossession = models.PositiveIntegerField
+
+    # scoring
+    finishing = models.PositiveIntegerField
+    balance = models.PositiveIntegerField
+    heading = models.PositiveIntegerField
+    jump = models.PositiveIntegerField
+    curl = models.PositiveIntegerField
+    kickingpower = models.PositiveIntegerField
+
+    # dribbling
+    physicalcontact = models.PositiveIntegerField
+    ballcontrol = models.PositiveIntegerField
+    dribbling = models.PositiveIntegerField
+    speed = models.PositiveIntegerField
+    acceleration = models.PositiveIntegerField
+    stamina = models.PositiveIntegerField
+
+    # defensive
+    defensiveawareness = models.PositiveIntegerField
+    ballwinning = models.PositiveIntegerField
+    aggression = models.PositiveIntegerField
+
+    weakfootusage = models.PositiveIntegerField  # 逆足頻度
+    weakfootaccuracy = models.PositiveIntegerField  # 逆足精度
+
+    # Pass ability
+    lowpass = models.PositiveIntegerField
+    loftedpass = models.PositiveIntegerField
+
+    # Condition
+    conditioning = models.PositiveIntegerField
+
+    # GK sense
+    gk_awareness = models.PositiveIntegerField
+    gk_catching = models.PositiveIntegerField
+    gk_clearing = models.PositiveIntegerField
+    gk_reflexes = models.PositiveIntegerField()
+    gk_reach = models.PositiveIntegerField()
 
     # To discrimination on admin page
 

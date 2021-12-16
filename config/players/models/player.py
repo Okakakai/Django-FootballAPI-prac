@@ -8,6 +8,7 @@ class Player(models.Model):
     date = models.DateField(blank=False)
     playername = models.CharField(max_length=200)
     age = models.PositiveIntegerField(null=False)
+    height = models.PositiveIntegerField(null=False)
     nationality = models.CharField(max_length=200)
     team = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)

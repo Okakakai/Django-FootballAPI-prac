@@ -22,7 +22,7 @@ class Player(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     playerimage = models.ImageField(upload_to='images/', blank=True)
 
-    # ability numerical parameters
+    # 
     height = models.PositiveIntegerField
     totalvalue = models.PositiveIntegerField
     offensiveawareness = models.PositiveIntegerField

@@ -18,42 +18,37 @@ class Player(models.Model):
     # Total
     totalvalue = models.PositiveIntegerField(null=True)
 
-    # condition
-    conditionvalue = models.PositiveIntegerField()
+    offensiveawareness = models.PositiveIntegerField()
+    ballcontrol = models.PositiveIntegerField()
+    dribbling = models.PositiveIntegerField()
+    tightpossession = models.PositiveIntegerField()
 
-    # scoring
+    lowpass = models.PositiveIntegerField()
+    loftedpass = models.PositiveIntegerField()
+
     finishing = models.PositiveIntegerField()
-    balance = models.PositiveIntegerField()
     heading = models.PositiveIntegerField()
-    jump = models.PositiveIntegerField()
+    placekicking = models.PositiveIntegerField()
     curl = models.PositiveIntegerField()
+    speed = models.PositiveIntegerField()
+    acceleration = models.PositiveIntegerField()
     kickingpower = models.PositiveIntegerField()
-
-    # defensive
+    jump = models.PositiveIntegerField()
+    physicalcontact = models.PositiveIntegerField()
+    balance = models.PositiveIntegerField()
+    stamina = models.PositiveIntegerField()
     defensiveawareness = models.PositiveIntegerField()
     ballwinning = models.PositiveIntegerField()
     aggression = models.PositiveIntegerField()
 
-    # drobbbling
-    offensiveawareness = models.PositiveIntegerField()
-    tightpossession = models.PositiveIntegerField()
-    physicalcontact = models.PositiveIntegerField()
-    ballcontrol = models.PositiveIntegerField()
-    dribbling = models.PositiveIntegerField()
-    speed = models.PositiveIntegerField()
-    acceleration = models.PositiveIntegerField()
-    stamina = models.PositiveIntegerField()
-
-    # gksense
     gk_awareness = models.PositiveIntegerField()
     gk_catching = models.PositiveIntegerField()
     gk_clearing = models.PositiveIntegerField()
     gk_reflexes = models.PositiveIntegerField()
     gk_reach = models.PositiveIntegerField()
-
-    # inverseleg
-    weakfootusage = models.PositiveIntegerField()  # 逆足頻度
-    weakfootaccuracy = models.PositiveIntegerField()  # 逆足精度
+    weakfootusage = models.PositiveIntegerField()
+    weakfootaccuracy = models.PositiveIntegerField()
+    conditionvalue = models.PositiveIntegerField()
 
     def __str__(self):
         return f"{self.playername} {self.nationality}"

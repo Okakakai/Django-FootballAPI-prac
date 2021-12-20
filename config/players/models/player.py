@@ -15,6 +15,9 @@ class Player(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     playerimage = models.ImageField(upload_to='images/', blank=True)
 
+    mostsuitableposition_type = models.CharField(max_length=5)
+    suitableposition_type = models.CharField(max_length=40)
+
     # Total
     totalvalue = models.PositiveIntegerField(null=False)
 

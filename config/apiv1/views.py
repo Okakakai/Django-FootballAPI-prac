@@ -20,7 +20,7 @@ class PlayerPositionListView(generics.ListAPIView):
 
 
 class HeadCoachViewSet(viewsets.ModelViewSet):
-    queryset = HeadCoach.objects.all().order_by('managementability')
+    queryset = HeadCoach.objects.all().order_by('-managementability')
     serializer_class = HeadCoachSerializer
     filter_fields = ('headcoachname', 'formation')
 

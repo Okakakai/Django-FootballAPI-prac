@@ -1,7 +1,8 @@
 from rest_framework.response import Response
 from rest_framework import viewsets, generics, filters
 from players.models import Player
-from .serializers import PlayerSerializer, PositionSerializer
+from players.models.headCoach import HeadCoach
+from .serializers import HeadCoachSerializer, PlayerSerializer, PositionSerializer
 
 
 class PlayerViewSet(viewsets.ModelViewSet):
@@ -9,6 +10,8 @@ class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all().order_by('playername', 'date')
     serializer_class = PlayerSerializer
     filter_fields = ('playername', 'nationality')
+
+
 class PlayerPositionListView(generics.ListAPIView):
     queryset = Player.objects.all()
     serializer_class = PositionSerializer
@@ -16,9 +19,10 @@ class PlayerPositionListView(generics.ListAPIView):
     search_fields = ['playername', 'suitableposition_type']
 
 
-
-
-
+class HeadCoachViewSet(viewsets.ModelViewSet):
+    queryset = HeadCoach.objects.all().order_by('managementability')
+    serializer_class = HeadCoachSerializer
+    filter_fields = ('headcoachname', 'formation')
 
 
 # pretty my memories
@@ -49,4 +53,3 @@ class PlayerPositionListView(generics.ListAPIView):
 #             queryset = queryset.filter(
 #                 purchaser__=position)  # 「__icontains」を追加する
 #         return queryset
-

@@ -5,6 +5,7 @@ from . import views
 router = routers.DefaultRouter()
 # /player/でviewにアクセスできるようにする
 router.register(r'players', views.PlayerViewSet)
+# なんかルータだとできないからurlpatternsで記述
 # router.register(r'position', views.PlayerPositionListView)
 # router.register(r'age', views.KariViewSet)
 

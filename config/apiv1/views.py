@@ -9,8 +9,19 @@ class PlayerViewSet(viewsets.ModelViewSet):
     queryset = Player.objects.all().order_by('playername', 'date')
     serializer_class = PlayerSerializer
     filter_fields = ('playername', 'nationality')
+class PlayerPositionListView(generics.ListAPIView):
+    queryset = Player.objects.all()
+    serializer_class = PositionSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['playername', 'suitableposition_type']
 
 
+
+
+
+
+
+# pretty my memories
 # class PositionViewSet(views.APIView):
 #     queryset = Player.objects.all()
 #     serializer_class = PositionSerializer
@@ -39,8 +50,3 @@ class PlayerViewSet(viewsets.ModelViewSet):
 #                 purchaser__=position)  # 「__icontains」を追加する
 #         return queryset
 
-class PlayerPositionListView(generics.ListAPIView):
-    queryset = Player.objects.all()
-    serializer_class = PositionSerializer
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['playername', 'suitableposition_type']

@@ -14,7 +14,7 @@ admin.site.register(Player, PlayerModelAdmin)
 
 
 class HeadCoachModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'managementability', 'id', 'created_at')
+    list_display = ('headcoachname', 'managementability', 'id', 'created_at')
     ordering = ('managementability',)
     readonly_fields = ('id', 'created_at')
 

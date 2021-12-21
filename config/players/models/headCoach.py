@@ -56,4 +56,4 @@ class HeadCoach(models.Model):
     pressing = models.CharField(max_length=100, choices=PRESSING_CHOICES)
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.headcoachname}"

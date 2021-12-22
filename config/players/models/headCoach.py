@@ -44,30 +44,35 @@ class HeadCoach(models.Model):
 
     # Number of people in each position
     cf_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+        default=2, validators=[MinValueValidator(0), MaxValueValidator(4)])
     st_number = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+
     lwg_number = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
     rwg_number = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
-    omf_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
-    cmf_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+
     lmf_number = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
     rmf_number = models.IntegerField(
         default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+
+    omf_number = models.IntegerField(
+        default=1, validators=[MinValueValidator(0), MaxValueValidator(4)])
+    cmf_number = models.IntegerField(
+        default=2, validators=[MinValueValidator(0), MaxValueValidator(4)])
     dmf_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+        default=1, validators=[MinValueValidator(0), MaxValueValidator(4)])
+
     cb_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+        default=2, validators=[MinValueValidator(0), MaxValueValidator(4)])
     rsb_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
+        default=1, validators=[MinValueValidator(0), MaxValueValidator(4)])
     lsb_number = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
-    gk_number = models.IntegerField(default=0)
+        default=1, validators=[MinValueValidator(0), MaxValueValidator(4)])
+
+    gk_number = models.IntegerField(default=1)
 
     offensivetype = models.CharField(
         max_length=100, choices=OFFENSIVETYPE_CHOICES)

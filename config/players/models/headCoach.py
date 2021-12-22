@@ -1,6 +1,7 @@
 import uuid
 
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class HeadCoach(models.Model):
@@ -40,6 +41,8 @@ class HeadCoach(models.Model):
     managementability = models.PositiveIntegerField(null=False)
     adaptability = models.PositiveIntegerField(null=False)
     formation = models.CharField(max_length=20, null=False)
+    cf_value = models.IntegerField(
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(4)])
 
     offensivetype = models.CharField(
         max_length=100, choices=OFFENSIVETYPE_CHOICES)

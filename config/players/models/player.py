@@ -13,7 +13,7 @@ class Player(models.Model):
     team = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    playerimage = models.ImageField(upload_to='images/', blank=True)
+    playerimage = models.ImageField(upload_to='images/players/', blank=True)
 
     mostsuitableposition_type = models.CharField(max_length=5)
     suitableposition_type = models.CharField(max_length=40)
@@ -55,4 +55,4 @@ class Player(models.Model):
     conditionvalue = models.PositiveIntegerField(null=False)
 
     def __str__(self):
-        return f"{self.playername} {self.nationality}"
+        return f"{self.playername} {self.nationality} {self.team}"

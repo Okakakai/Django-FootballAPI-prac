@@ -38,7 +38,7 @@ class HeadCoach(models.Model):
     created_at = models.DateField(auto_now_add=True)
 
     headcoachname = models.CharField(max_length=50)
-    playerimage = models.ImageField(
+    headcoachimage = models.ImageField(
         upload_to='images/headcoaches/', default='images/headCoaches/HeadCoachDefaultImage.png')
 
     managementability = models.PositiveIntegerField(null=False)

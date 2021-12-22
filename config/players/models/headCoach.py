@@ -38,9 +38,15 @@ class HeadCoach(models.Model):
     created_at = models.DateField(auto_now_add=True)
 
     headcoachname = models.CharField(max_length=50)
+    playerimage = models.ImageField(
+        upload_to='images/headcoaches/', default='images/headCoaches/HeadCoachDefaultImage.png')
+
     managementability = models.PositiveIntegerField(null=False)
     adaptability = models.PositiveIntegerField(null=False)
     formation = models.CharField(max_length=20, null=False)
+
+    formationimage = models.ImageField(
+        upload_to='images/headcoaches/', blank=True)
 
     # Number of people in each position
     cf_number = models.IntegerField(

@@ -23,4 +23,5 @@ class PositionSerializer(serializers.ModelSerializer):
 class HeadCoachSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeadCoach
-        fields = ('id', 'headcoachname', 'managementability', 'formation')
+        fields = ('id', 'headcoachname', 'headcoachimage', 'managementability',
+                  'formation', 'formationimage')

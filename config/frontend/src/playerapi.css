@@ -1,0 +1,40 @@
+ul {
+    padding: 0;
+}
+
+li {
+    padding: 0.5em;
+    line-height: 1.5em;
+    background-color: #f1f8ff;
+    margin-bottom: 5px;
+}
+
+.totalvalue {
+    /* display: inline-block; */
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #5c9ee7;
+    font-family: 'Avenir', 'Arial Black', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2px;
+}
+
+.playerimg {
+    width: auto;
+    height: 50px;
+}
+
+.playercard {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.player-card-list {
+    width: 90vw;
+    margin: auto;
+    padding-top: 1rem;
+}

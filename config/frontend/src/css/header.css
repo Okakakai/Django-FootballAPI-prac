@@ -1,0 +1,40 @@
+nav ul {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-left: 3rem;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    background-color: #111;
+}
+
+nav ul :hover {
+    color: white;
+}
+
+.menu {
+    display: block;
+    text-align: center;
+}
+
+nav {
+    /* background-color: black; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+li {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}

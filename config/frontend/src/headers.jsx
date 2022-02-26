@@ -11,7 +11,7 @@ export default function Headers(){
                     <NavLink className="menu" to = "/">Top</NavLink>
                 </li>
                 <li>
-                    <NavLink className="menu" to = "/player">登録選手一覧</NavLink>
+                    <NavLink className="menu" to = "/player-list">登録選手一覧</NavLink>
                 </li>
             </ul>
         </nav>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "./playerapi.css"
+import "./css/playerapi.css"
 
 const PlayerAPI = () => {
     const [players, setplayers] = useState([]);

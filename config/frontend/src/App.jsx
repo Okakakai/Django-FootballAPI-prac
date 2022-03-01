@@ -6,7 +6,9 @@ import Top from './Top';
 
 import Headers  from './headers';
 
+import "./css/reset.css"
 import './css/App.css';
+import HeadCoachAPI from './headCoachapi';
 
 
 function App(){
@@ -17,6 +19,7 @@ function App(){
                 <Routes>
                     <Route path="/" element={<Top />} />
                     <Route path="/player-list" element={<PlayerAPI />} />
+                    <Route path="/coacher-list" element={<HeadCoachAPI />}/>
                 </Routes>
             </BrowserRouter>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "./css/playerapi.css"
+import "./css/reset.css"
+import "./css/playerapi.css";
 
 const PlayerAPI = () => {
     const [players, setplayers] = useState([]);
@@ -18,19 +19,17 @@ const PlayerAPI = () => {
     }, [])
 
     return ( 
-        <div className="player-card-list">
-            <ul>
-                {
-                players.map(player =>
-                    <li className="playercard" key={ player.id }>
-                        <p className="totalvalue">{player.totalvalue}</p>
-                        <img className="playerimg" src={player.playerimage} />
-                        <p>{ player.playername }</p>
-                    </li>
-                )
-                }
-            </ul> 
-        </div>
+    <div className = "player-card-list" >
+        <ul> {
+            players.map(player =>
+                <li className = "playercard"key = { player.id } >
+                    <p className = "totalvalue" > { player.totalvalue } </p> 
+                    <img className = "playerimg"src = { player.playerimage }/>
+                    <p> { player.playername } </p> 
+                </li>
+            )
+        } </ul>  
+    </div >
     )
 }
 

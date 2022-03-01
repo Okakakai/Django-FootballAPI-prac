@@ -8,7 +8,7 @@ router.register(r'players', views.PlayerViewSet)
 # なんかルータだとできないからurlpatternsで記述
 # router.register(r'position', views.PlayerPositionListView)
 # router.register(r'age', views.KariViewSet)
-router.register(r'headcoach', views.HeadCoachViewSet)
+router.register(r'headcoachers', views.HeadCoachViewSet)
 
 
 urlpatterns = [

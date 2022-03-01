@@ -7,7 +7,7 @@ from players.models import HeadCoach
 class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
-        fields = ('id', 'date', 'playername', 'totalvalue', 'playerimage',
+        fields = ('id', 'date', 'type', 'playername', 'totalvalue', 'playerimage',
                   'nationality', 'team', 'updated_at')
         read_only_fields = ('id',)
 

@@ -15,6 +15,12 @@ class Player(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     playerimage = models.ImageField(upload_to='images/players/', blank=True)
 
+    type = models.CharField(max_length=50, choices=(
+        ("LE", "Legend"),
+        ("IM", "Iconic"),
+        ("FP", "Featured")
+    ))
+
     mostsuitableposition_type = models.CharField(max_length=5)
     suitableposition_type = models.CharField(max_length=40)
 

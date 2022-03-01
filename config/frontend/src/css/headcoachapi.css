@@ -1,0 +1,14 @@
+.coacher-img {
+    width: auto;
+    height: 3.125rem;
+}
+
+.coachercard {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    gap: 1rem;
+    color: red;
+}

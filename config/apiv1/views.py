@@ -2,7 +2,8 @@ from rest_framework.response import Response
 from rest_framework import viewsets, generics, filters
 from players.models import Player
 from players.models.headCoach import HeadCoach
-from .serializers import HeadCoachSerializer, PlayerSerializer, PositionSerializer
+from .serializers import HeadCoachSerializer, PlayerSerializer, PlayerTypeSerializer, PositionSerializer
+from apiv1 import serializers
 
 
 class PlayerViewSet(viewsets.ModelViewSet):
@@ -23,6 +24,12 @@ class HeadCoachViewSet(viewsets.ModelViewSet):
     queryset = HeadCoach.objects.all().order_by('-managementability')
     serializer_class = HeadCoachSerializer
     filter_fields = ('headcoachname', 'formation')
+
+
+class PlayerTypeViewSet(viewsets.ModelViewSet):
+    queryset = Player.objects.all().order_by('totalvalue')
+    serializer_class = PlayerTypeSerializer
+    filter_fields = ('totalvalue', 'type')
 
 
 # pretty my memories

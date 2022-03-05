@@ -9,6 +9,7 @@ import Headers  from './headers';
 import "./css/reset.css"
 import './css/App.css';
 import HeadCoachAPI from './headCoachapi';
+import PlayerDetail from "./playerdetail"
 
 
 function App(){
@@ -19,6 +20,7 @@ function App(){
                 <Routes>
                     <Route path="/" element={<Top />} />
                     <Route path="/player-list" element={<PlayerAPI />} />
+                    <Route path="/player-detail/:id" element = {<PlayerDetail />}/>
                     <Route path="/coacher-list" element={<HeadCoachAPI />}/>
                 </Routes>
             </BrowserRouter>

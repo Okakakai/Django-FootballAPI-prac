@@ -10,8 +10,10 @@ router.register(r'players', views.PlayerViewSet)
 # router.register(r'age', views.KariViewSet)
 router.register(r'headcoachers', views.HeadCoachViewSet)
 
+router.register(r'player-type', views.PlayerTypeViewSet)
+
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('position/', views.PlayerPositionListView.as_view())
+    path('player-position/', views.PlayerPositionListView.as_view())
 ]

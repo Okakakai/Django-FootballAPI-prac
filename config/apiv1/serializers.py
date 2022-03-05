@@ -20,6 +20,13 @@ class PositionSerializer(serializers.ModelSerializer):
                   'suitableposition_type')
 
 
+class PlayerTypeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Player
+        fields = ('id', 'totalvalue', 'type','playerimage')
+
+
 class HeadCoachSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeadCoach
